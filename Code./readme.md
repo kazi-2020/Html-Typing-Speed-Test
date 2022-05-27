@@ -1,1 +1,1 @@
-To view the main homwpage open the home.html file
+To view the main homepage open the home.html file
