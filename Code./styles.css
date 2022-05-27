@@ -1,0 +1,136 @@
+html {
+  background: #212121;
+}
+
+body {
+  font-family: "Noto", monospace;
+  background: #ffffff;
+  color: #484848;
+}
+
+a {
+  color: #000000;
+}
+.yellow {
+  align-self: center;
+  color: #0b0a0a;
+}
+.correct {
+  color: #29bb89;
+}
+.wrong {
+  color: #e84545;
+  text-decoration: underline;
+}
+.current {
+  color: #000000;
+}
+.center {
+  text-align: center;
+}
+.if {
+  display: inline-flex;
+}
+
+.box {
+  max-width: 900px;
+  padding: 0 30px;
+}
+
+#heading {
+  align-self: center;
+  margin-top: 50px;
+  font-size: 1.75rem;
+  font-family: "Big Caslon", Big Caslon;
+  font-weight: 500;
+}
+.limits-box {
+  text-align: right;
+  margin: 0 35px 0 0;
+  font-size: 15px;
+}
+
+.stats {
+  margin: 10px auto 20px auto;
+}
+
+.details {
+  font-size: 6rem;
+}
+.stat-block {
+  padding: 0 30px;
+  min-width: 250px;
+}
+
+@media (max-width: 600px) {
+  .details {
+    font-size: 5rem;
+  }
+  .stat-block {
+    min-width: 0;
+  }
+}
+
+.stat-name {
+  font-size: 1rem;
+  position: relative;
+  top: 45px;
+  right: 5px;
+}
+
+.text-display {
+  margin: 0 0 22px 0;
+  font-size: 21px;
+  text-align: left;
+  min-height: 200px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: 0;
+}
+a:focus,
+a:hover {
+  color: #e8e8e8;
+  text-decoration: none;
+}
+
+footer {
+  padding: 20px;
+  font-size: 15px;
+}
+
+.restart-button {
+  padding: 10px;
+}
+
+textarea {
+  background: #0b0b0b;
+  border: solid, #000000;
+  border-width: 2px;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 1.2rem;
+  resize: none;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  font-variant-caps: small-caps;
+  color: gray;
+  text-align: center;
+  size: 20px;
+}
+
+a.f {
+  color: gray;
+  text-decoration: none;
+  cursor: default;
+  /*default will be as if there is no text*/
+}

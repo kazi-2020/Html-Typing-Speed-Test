@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: "Verdana", sans-serif;
+            cursor: default;
+        }
+
+        .bgimg {
+            background-color: black;
+            background-image: url('jeremy-bishop-mZJcu881Gco-unsplash.jpg');
+            background-image: url('https://images.unsplash.com/photo-1497045259452-eae56671c63d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .bg-text {
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: white;
+            font-variant-caps: small-caps;
+            font-style: italic;
+        }
+
+        h1 {
+            color: white;
+            font-variant-caps: small-caps;
+            size: 75%;
+        }
+
+        h2 {
+            color: white;
+            font-variant-caps: small-caps;
+            size: 42%;
+        }
+
+        .spbutton {
+            border: 2px solid #e7e7e7;
+            border-color: #e7e7e7;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+            width: 24%;
+            background-color: transparent;
+        }
+
+        .spbutton:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #e7e7e7;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button {
+            border: 2px solid #aa7979;
+            border-color: #e7e7e7;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+            width: 24%;
+        }
+/*
+        .canvas-parent {
+            border: 2px solid #e7e7e7;
+            border-color: white;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /*border-radius: 12px;
+            transition-duration: 0.4s;
+            width: 900px;
+            height: 20%;
+            cursor: pointer;
+            align-self: center;
+            /*color:red;
+        }
+
+        .canvas-parent:hover {
+            border: 2px solid #e7e7e7;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            background-color: white
+                /*red
+            ;
+        }
+
+        .canvas {
+            /*border: 2px solid #e7e7e7;
+            border-color: white;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+            width: 69%;
+            height: 20%;
+            cursor: pointer;
+            /*color:red;
+        }
+
+        .canvas:hover {
+            border: 2px solid #e7e7e7;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            background-color: white;
+        }*/
+
+        .button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #e7e7e7;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .bottom {
+            position: fixed;
+            bottom: 0;
+            font-variant-caps: small-caps;
+            color: white;
+            text-align: center;
+            size: 16px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            cursor: default;
+        }
+    </style>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body class="bgimg">
+
+    <center>
+        <h1>Reaction Time Test.</h1>
+
+        <div id="p1"></div>
+        <div id="p2"></div><br><br>
+
+        <!--div id="startbutton"></div><br-->
+
+        <div class="canvas-parent">
+            <canvas id="canvas"></canvas>
+        </div><br><br>
+
+        <div class="score">
+            <div class="section-1">
+                <button type="button" id="start" class="spbutton">Start</button>
+            </div>
+            <div class="section-2">
+                <p>Your score:</p>
+                <p id="time-text">NO TIME</p>
+            </div>
+        </div>
+
+        <div class="bottom">Brought to you by <a href="https://github.com/AnushSomasundaram">Anush</a>, <a
+                href="https://github.com/ashishkulkarnii">Ashish</a> and <a
+                href="https://github.com/kazi-2020">Azhar</a>.</div>
+    </center>
+
+    <script type="text/babel">
+        function Startbutton(props) {
+            return <button className="spbutton" id="start" type="button">{props.content}</button>;
+        }
+
+        function PrintP(props) {
+            return <p>{props.content}</p>
+        }
+
+        var p1content = "Take this test to find out how long you take to react to a change in colour on the screen."
+        ReactDOM.render(<PrintP content={p1content} />, document.getElementById("p1"))
+
+        var p2content = "Click the area when it turns green."
+        ReactDOM.render(<PrintP content={p2content} />, document.getElementById("p2"))
+
+        //ReactDOM.render(<Startbutton content="Start" onClick="onClick()"/>, document.getElementById("startbutton"));
+    </script>
+
+</body>
+
+<script src="reaction_time.js"></script>
+
+</html>

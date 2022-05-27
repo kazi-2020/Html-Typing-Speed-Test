@@ -1,0 +1,131 @@
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 80px;
+  font-family: "Oswald";
+  color: #e7e7e7;
+  border: 5px solid;
+  border-radius: 10px;
+  width: 600px;
+}
+
+p {
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Verdana", sans-serif;
+  font-size: 20px;
+  color: #e7e7e7;
+}
+
+.button {
+  font-family: "Unica One";
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: center;
+  line-height: 155px;
+  margin: 0 auto;
+  height: 25%; /*300px;*/
+  width: 25%; /*300px;*/
+  margin-top: 25px;
+  border: 2px solid #e7e7e7;
+  border-color: #e7e7e7;
+  padding: 32px 33px;
+  /*background-color: black;*/
+  border-radius: 12px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: default;
+}
+
+.button:hover {
+  font-size: 37px;
+}
+
+.button:active {
+  font-size: 35px;
+}
+
+#stats {
+  margin-top: 30px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 2px solid #e7e7e7;
+  border-color: #e7e7e7;
+  color: rgb(87, 80, 80);
+  font-family: "Verdana", sans-serif;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  width: 24%;
+  cursor: default;
+}
+
+.bgimg {
+  background-color: black;
+  background-image: url("https://images.unsplash.com/photo-1497045259452-eae56671c63d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"); /*url('jeremy-bishop-mZJcu881Gco-unsplash.jpg');*/
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /*filter: blur(8px);
+-webkit-filter: blur(8px);*/
+}
+
+.bg-text {
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.botton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button.reset:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  font-variant-caps: small-caps;
+  color: white;
+  text-align: center;
+  size: 16px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: default;
+  /*default will be as if there is no text*/
+}

@@ -1,0 +1,176 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: "Verdana", sans-serif;
+            cursor: default;
+        }
+
+        .bgimg {
+            background-color: black;
+            background-image: url('jeremy-bishop-mZJcu881Gco-unsplash.jpg');
+            background-image: url('https://images.unsplash.com/photo-1497045259452-eae56671c63d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            /*filter: blur(8px);
+  -webkit-filter: blur(8px);*/
+
+        }
+
+        .bg-text {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: white;
+            /*#5a5288;*/
+            font-variant-caps: small-caps;
+            font-style: italic;
+            /*background-color: ;*/
+        }
+
+        h1 {
+            color: white;
+            /*#5a5288;*/
+            font-variant-caps: small-caps;
+            size: 75%;
+        }
+
+        h2 {
+            color: white;
+            /*#5a5288;*/
+            font-variant-caps: small-caps;
+            size: 42%;
+        }
+
+        .button {
+            /*background-color: #434c7a;*/
+            border: 2px solid #e7e7e7;
+            border-color: #e7e7e7;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+            width: 24%;
+        }
+
+        .button:hover {
+            /*background-color: rgb(138, 153, 196);
+            color: white;
+            opacity: 25%;*/
+            background-color: white;
+            color: black;
+            border: 2px solid #e7e7e7;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .bottom {
+            position: fixed;
+            bottom: 0;
+            font-variant-caps: small-caps;
+            color: white;
+            text-align: center;
+            size: 16px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            cursor: default;
+            /*default will be as if there is no text*/
+        }
+    </style>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body class="bgimg">
+
+    <div id="tsparticles"></div>
+
+    <center>
+        <h1 id="main_h1"></h1>
+
+        <h2 id="sub_h"></h2>
+        <div id="main_div"></div>
+        <p id="desc_p"></p>
+        <div id="main_div2"></div>
+        <p id="desc_p2"></p>
+        <div id="main_div3"></div>
+        <p id="desc_p3"></p>
+        <div id="main_div4"></div>
+        <p id="desc_p4"></p><br><br>
+        <p id="page_description"></p>
+
+        <div class="bottom">Brought to you by <a href="http://github.com/AnushSomasundaram">Anush</a>, <a
+                href="http://github.com/ashishkulkarnii">Ashish</a> and <a
+                href="https://github.com/kazi-2020">Azhar</a>.</div>
+
+
+    </center>
+
+    <script type="text/babel">
+        function Button(props) {
+            //return <button type="button" class="button">{props.content}</button>;
+            return <a href={props.link} class="button">{props.content}</a>;
+        }
+
+        function PrintH1(props) {
+            return <h1>{props.content}</h1>
+        }
+
+        function PrintP(props) {
+            return <p>{props.content}</p>
+        }
+
+        var p1content = "Take this test to find out how many words you can type per minute. (WPM)";
+        var p2content = "Take this test to find out how many times you can click per second. (CPS)";
+        var p3content = "Take this test to find out how long you take to react to a change in colour on the screen."
+        var p4content = "Learn how to improve your typing speed, clicks per second, and reaction times."
+        var pagedesccontent = "This page was rendered using React.";
+        var wpmtestlink = "index%20(1).html";
+        var cpstestlink = "cps.html";
+        var reactiontimelink = "reaction_time.html";//file:///C:/Users/kulka/Development/Class_PES1UG20CS085/wt/group-proj/reaction_time.html";
+        var tipsntricks = "tipsntricks.html";
+
+        ReactDOM.render(<PrintH1 content="AAA Typing Test." />, document.getElementById("main_h1"))
+        ReactDOM.render(<Button content="WPM Test" link={wpmtestlink} />, document.getElementById("main_div"));
+        ReactDOM.render(<PrintP content={p1content} />, document.getElementById("desc_p"))
+        ReactDOM.render(<Button content="CPS Test" link={cpstestlink} />, document.getElementById("main_div2"));
+        ReactDOM.render(<PrintP content={p2content} />, document.getElementById("desc_p2"))
+        ReactDOM.render(<Button content="Reaction Time Test" link={reactiontimelink} />, document.getElementById("main_div3"));
+        ReactDOM.render(<PrintP content={p3content} />, document.getElementById("desc_p3"));
+        ReactDOM.render(<Button content="Tips & Tricks" link={tipsntricks} />, document.getElementById("main_div4"));
+        ReactDOM.render(<PrintP content={p4content} />, document.getElementById("desc_p4"))
+        ReactDOM.render(<PrintP content={pagedesccontent} />, document.getElementById("page_description"))
+
+    </script>
+
+</body>
+
+</html>
